@@ -1,12 +1,12 @@
 <?php
   include "../../koneksi.php";
   if(!isset($_GET["reset_pass"])){
-    exit("Can't find page");
+    echo "<script language = 'javascript'> alert ('Maaf Halaman Ini Sudah Kadaluarsa'); window.location='../login'</script>";
   }
   $code = $_GET["reset_pass"];
   $query = mysqli_query($koneksi, "SELECT email FROM reset_password WHERE code = '$code' ");
   if(mysqli_num_rows($query)==0){
-    exit("Can't find page");
+    echo "<script language = 'javascript'> alert ('Maaf Halaman Ini Sudah Kadaluarsa'); window.location='../../index'</script>";
   }
   $row = mysqli_fetch_array($query);
 ?>
