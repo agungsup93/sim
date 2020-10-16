@@ -44,6 +44,14 @@
               <span id="mybutton" onclick="change()"><i class="far fa-eye"></i></span>
             </div>
           </div>
+        </div>
+		<div class="input-group mb-3">
+          <input id="pass" type="password" name="pass" class="form-control" placeholder="rePassword">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span id="mybutton1" onclick="change1()"><i class="far fa-eye"></i></span>
+            </div>
+          </div>
         </div>	
         <div class="row">
 		  <div class="col-12">
@@ -72,6 +80,23 @@
             {
                document.getElementById('password').type = 'password';
                document.getElementById('mybutton').innerHTML = '<i class="far fa-eye"></i>';
+            }
+         }
+      </script>
+<script type="text/javascript">
+         function change1()
+         {
+            var x = document.getElementById('pass').type;
+ 
+            if (x == 'password')
+            {
+               document.getElementById('pass').type = 'text';
+               document.getElementById('mybutton1').innerHTML = '<i class="far fa-eye-slash"></i>';
+            }
+            else
+            {
+               document.getElementById('pass').type = 'password';
+               document.getElementById('mybutton1').innerHTML = '<i class="far fa-eye"></i>';
             }
          }
       </script>
