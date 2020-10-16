@@ -1,0 +1,81 @@
+/* ... Heder ... */
+.al-navbar {
+     border-bottom:1px solid #e0fffa;
+     padding:20px;
+     background:#e0fffa;
+     box-shadow:0 0 3px #f0f0f0;
+}
+ .al-navbar .navbar-brand {
+     font-weight:800;
+}
+ .al-navbar .active a {
+     color:red;
+}
+ .al-navbar .dropdown-menu {
+     border-radius:0;
+     border-color:#f0f0f0;
+     box-shadow:0 0 2px #f0f0f0;
+     padding:0;
+}
+ .al-navbar .dropdown-menu a {
+     padding:10px 25px;
+     color:#999;
+}
+ .al-navbar .dropdown-menu a:hover {
+     color:#fff;
+     background:#D95D39;
+}
+ .al-icons a {
+     color:#222;
+     margin:0 15px 0 0;
+}
+ @media screen and (min-width:992px) {
+     .al-icons {
+         margin:0 0 0 20px;
+    }
+}
+ @media screen and (max-width:992px) {
+     .al-icons {
+         margin:10px 0 0 0;
+    }
+}
+
+
+
+/* ... Body ... */
+.hk-services {
+   
+     font-family: 'PT Sans', sans-serif;
+     padding:80px 0;
+}
+ .hk-services-header h2 {
+     color:#4a5650;
+     font-size:38px;
+     font-weight:700;
+}
+ .hk-services-header p {
+     color:#7a9084;
+     font-size:20px;
+}
+ .hk-services-box {
+     margin:15px 0;
+     padding:30px 15px;
+     transition:all .3s ease-in-out;
+}
+ .hk-services-box i {
+     color:#31e080;
+     font-size:38px;
+     margin-bottom:15px;
+}
+ .hk-services-box h3 {
+     color:#54655c;
+     font-size:22px;
+     font-weight:bold;
+     margin-bottom:0;
+}
+ .hk-services-box:hover {
+     background-image:linear-gradient(to left, #31e080 ,#20f176);
+}
+ .hk-services-box:hover i, .hk-services-box:hover h3 {
+     color:#fff;
+}
