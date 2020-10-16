@@ -26,10 +26,10 @@ if( ! isset($_SESSION['email'])){
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <section class="col-lg-2 connectedSortable">
+          <section class="col-lg-1 connectedSortable">
           </section>
 <!----------------------------------------------ISI-------------------------------------------->
-		  <section class="col-lg-8 connectedSortable">
+		  <section class="col-lg-10 connectedSortable">
 			<div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Form Add User</h3>
@@ -138,7 +138,7 @@ if( ! isset($_SESSION['email'])){
             </div>
 		  </section>
 <!-----------------------------------------END ISI----------------------------------------->
-		  <section class="col-lg-2 connectedSortable">
+		  <section class="col-lg-1 connectedSortable">
           </section>
         </div>
       </div>
