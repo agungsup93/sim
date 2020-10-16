@@ -64,9 +64,9 @@ if( ! isset($_SESSION['email'])){
 								<td>
 									<center>
 										<button type="button" class="btn bg-gradient-danger btn-xs">
-											<a href="#" onclick="confirm_modal('delete/d_stock.php?&id=<?php echo $data['id'];?>');">
+											<a href="#" onclick="confirm_modal('delete/d_user.php?&id=<?php echo $data['id'];?>');">
 												<i class="nav-icon far fa-trash-alt" style="font-size:100%;color:white;" title="Hapus Data"></i>
-											</a><span>Hapus</span>
+											</a>
 										</button>
 									</center>
 								</td>
@@ -83,8 +83,37 @@ if( ! isset($_SESSION['email'])){
       </div>
     </section>
   </div>
+  
+  
+<!-------------------------------------Delete Data---------------------------------->
+	<div class="modal fade" id="modal-delete">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-danger">
+              <h4 class="modal-title">Hapus Data<i>(Matrial)</i></h4>
+              </button>
+            </div>
+			
+			<div class="modal-body" style="margin:0px; border-top:0px; text-align:center;">
+				<a href="#" class="btn btn-danger" id="delete_link">Delete</a>
+				<button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+			</div>
+
+          </div>
+        </div>
+    </div>
+
+  
 <?php
 	
 	include '_controller/footer.php';
 	
 ?>
+
+<script type="text/javascript">
+    function confirm_modal(delete_url)
+    {
+      $('#modal-delete').modal('show', {backdrop: 'static'});
+      document.getElementById('delete_link').setAttribute('href' , delete_url);
+    }
+</script>
