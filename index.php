@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="primaryNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="0/login">Login Admin</a>
+                    <a class="nav-link" href="0/login">Login</a>
                 </li>
             </ul>
         </div>
