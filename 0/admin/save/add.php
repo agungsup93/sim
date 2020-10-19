@@ -37,15 +37,35 @@ if (isset($_POST['save'])){
 				$url = 'http://' . $_SERVER['HTTP_HOST'];
 				$mail->isHTML(true);
 				$mail->Subject			= 'Aktifasi Akun';
-				$mail->Body				= "Selamat Aktifasi Akun Baru anda<br> Email :
-									Klik <a href='$url'>disini</a> untuk masuk ke Program Aplikasi SIM dan masukan email serta password anda "
+				$mail->Body				= "<div style='	border: 2px #0022ff solid;
+														width:50%;
+														padding: 5px; 
+														background-color: #94dbff; 
+														text-align: left;'>
+													<font face='century gothic'> 
+													<h1>Pendaftaran Akun Baru</h1><br>
+														Halo, ".$email." Akun anda telah aktif. Untuk masuk silahkan masukan<br>
+														Email 		: ".$email."<br>
+														Password	: ".$pass."<br>
+														Klik <a href='$url'>DISINI</a> untuk langsung menuju ke program atau ketikan IP : 192.168.1.100 di Browswer yang tersedia.<br>
+														Jika anda mengalami masalah, silahkan hubungi Administrator atau Developer Program.<br><br>
+														<b>mohon untuk ganti password, untuk pencegahan tidakan penyalahgunakan akun.</b><br>
+													</font>
+													<font face='Tahoma'><br>
+														<small><b><i>Pesan Ini Dikirim Menggunakan Server System, Mohon untuk tidak Membalas</i></b></small><br><br>
+														<br><br>
+														Best Regards<br><br>
+														<b><i>System Info</i></b><br>
+														____________________
+													</font>
+											</div>";
 				;
 				$mail->AltBody			= 'This is the body in plain text for non-HTML mail clients';
 				if (!$mail->Send())
 				{
 					echo "Mailer Error: " . $mail->ErrorInfo;
 				} else {
-					echo "<script language = 'javascript'> alert ('Succes'); window.location='../add-user'</script> ";
+					echo "<script language = 'javascript'> alert ('Succes'); window.location='../data-user'</script> ";
 				}
 		} else {
 			echo "<script language = 'javascript'> alert ('Gagal'); window.location='../add-user'</script> ";

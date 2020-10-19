@@ -34,15 +34,14 @@ if( ! isset($_SESSION['email'])){
 						  <table id="example1" class="table table-bordered table-striped">
 							<thead>
 								<tr>
-								  <th><center>NO</center></th>
-								  <th><center>NIK</center></th>
-								  <th><center>Nama</center></th>
-								  <th><center>Panjang</center></th>
-								  <th><center>Password</center></th>
-								  <th><center>Jabatan</center></th>
-								  <th><center>Email</center></th>
-								  <th><center>Telepone</center></th>
-								  <th><center>Action</center></th>
+								  <th>NO</th>
+								  <th>NIK</th>
+								  <th>Depan</th>
+								  <th>Belakang</th>
+								  <th>Jabatan</th>
+								  <th>Email</th>
+								  <th>Telepone</th>
+								  <th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -57,7 +56,6 @@ if( ! isset($_SESSION['email'])){
 								<td><?php echo $data['nik']; ?></td>
 								<td><?php echo $data['nm_dpn']; ?></td>
 								<td><?php echo $data['nm_blk']; ?></td>
-								<td><?php echo $data['pass']; ?></td>
 								<td><?php echo $data['jbtn']; ?></td>
 								<td><?php echo $data['email']; ?></td>
 								<td><?php echo $data['tlp']; ?></td>
