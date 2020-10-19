@@ -43,5 +43,53 @@
 			});
 		});
 </script>
+<script type="text/javascript">
+         function change()
+         {
+            var x = document.getElementById('password').type;
+ 
+            if (x == 'password')
+            {
+               document.getElementById('password').type = 'text';
+               document.getElementById('mybutton').innerHTML = '<i class="far fa-eye-slash"></i>';
+            }
+            else
+            {
+               document.getElementById('password').type = 'password';
+               document.getElementById('mybutton').innerHTML = '<i class="far fa-eye"></i>';
+            }
+         }
+</script>
+<script type="text/javascript">
+         function change1()
+         {
+            var x = document.getElementById('password1').type;
+ 
+            if (x == 'password')
+            {
+               document.getElementById('password1').type = 'text';
+               document.getElementById('mybutton1').innerHTML = '<i class="far fa-eye-slash"></i>';
+            }
+            else
+            {
+               document.getElementById('password1').type = 'password';
+               document.getElementById('mybutton1').innerHTML = '<i class="far fa-eye"></i>';
+            }
+         }
+</script>
+<script type="text/javascript">
+        $(function () {
+            $("#new-pass").click(function () {
+                var password = $("#password").val();
+                var confirmPassword = $("#password1").val();
+                if (password != confirmPassword) {
+                    alert("Password Tidak Sesuai");
+                    return false;
+                }
+                return true;
+            });
+        });
+</script>
+
 </body>
 </html>

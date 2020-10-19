@@ -43,6 +43,14 @@
               </p>
             </a>
           </li>
+		  <li class="nav-item has-treeview">
+            <a href="g_pass?id=<?php echo $data['id']; ?>" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
+              <p>
+                Ganti Password
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
