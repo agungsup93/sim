@@ -35,7 +35,7 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Masukan Password Baru Anda</p>
-      <form action="new-pass.php" method="post">
+	  <form action="new-pass" method="post">
         <div class="input-group mb-3">
 		  <input type="hidden" value="<?php echo $row["email"]?>" name="email">
           <input id="password" type="password" name="password" class="form-control" placeholder="New Password">
@@ -44,10 +44,19 @@
               <span id="mybutton" onclick="change()"><i class="far fa-eye"></i></span>
             </div>
           </div>
+        </div>
+		
+		<div class="input-group mb-3">
+          <input id="password1" type="password" name="pass" class="form-control" placeholder="rePassword">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span id="mybutton1" onclick="change1()"><i class="far fa-eye"></i></span>
+            </div>
+          </div>
         </div>	
         <div class="row">
 		  <div class="col-12">
-            <button type="submit" name="new_pass" class="btn btn-success btn-block">Ganti&nbsp;&nbsp;<span class="fas fa-check"></span></button>
+            <button type="submit" name="new_pass" id="new-pass" class="btn btn-success btn-block">Ganti&nbsp;&nbsp;<span class="fas fa-check"></span></button>
           </div>
         </div>
       </form>
@@ -58,7 +67,7 @@
 <script src="../template/plugins/jquery/jquery.js"></script>
 <script src="../template/plugins/jquery/jquery.min.js"></script>
 <script src="../template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript">
+	<script type="text/javascript">
          function change()
          {
             var x = document.getElementById('password').type;
@@ -74,6 +83,37 @@
                document.getElementById('mybutton').innerHTML = '<i class="far fa-eye"></i>';
             }
          }
-      </script>
+    </script>
+	<script type="text/javascript">
+         function change1()
+         {
+            var x = document.getElementById('password1').type;
+ 
+            if (x == 'password')
+            {
+               document.getElementById('password1').type = 'text';
+               document.getElementById('mybutton1').innerHTML = '<i class="far fa-eye-slash"></i>';
+            }
+            else
+            {
+               document.getElementById('password1').type = 'password';
+               document.getElementById('mybutton1').innerHTML = '<i class="far fa-eye"></i>';
+            }
+         }
+    </script>
+<script type="text/javascript">
+        $(function () {
+            $("#new-pass").click(function () {
+                var password = $("#password").val();
+                var confirmPassword = $("#password1").val();
+                if (password != confirmPassword) {
+                    alert("Password Tidak Sesuai");
+                    return false;
+                }
+                return true;
+            });
+        });
+</script>
+	
 	  </body>
 </html>

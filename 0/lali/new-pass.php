@@ -3,8 +3,9 @@ error_reporting(0);
 include "../../koneksi.php";
 if(isset($_POST["new_pass"])){
     $email 		= $_POST["email"];
-    $pass 		= md5($_POST["password"]);
-    $query 		= mysqli_query($koneksi, "UPDATE superadmin SET password = '$pass' WHERE email = '$email'");
+    $password 	= md5($_POST["password"]);
+    $pass 		= htmlspecialchars($_POST["pass"]);
+    $query 		= mysqli_query($koneksi, "UPDATE superadmin SET password = '$password', pass = '$pass' WHERE email = '$email'");
     if($query){
                 mysqli_query($koneksi, "DELETE FROM reset_password WHERE email = '$email'");
     }

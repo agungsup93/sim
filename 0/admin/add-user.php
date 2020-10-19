@@ -74,7 +74,7 @@ if( ! isset($_SESSION['email'])){
 							</div>
 							<div class="form-group">
 								<label>rePassword</label>
-								<input id="password1" type="repass" name="pass" class="form-control" placeholder="Password">
+								<input id="password1" type="password" name="pass" class="form-control" placeholder="Password">
 								  <div class="input-group-append">
 									<div class="input-group-text">
 									  <span id="mybutton1" onclick="change1()"><i class="far fa-eye"></i></span>
