@@ -41,8 +41,8 @@ if(isset($_POST["reset_pass"])){
 									Klik <a href='$url'>DISINI</a> untuk mereset password anda.<br>
 									Jika anda mengalami masalah, silahkan hubungi Administrator atau Developer Program.<br>
 								</font>
-								<font face='Tahoma'>
-									<b><i>Pesan Ini Dikirim Menggunakan System, Mohon untuk tidak membalas</i></b><br><br>
+								<font face='Tahoma'><br>
+									<small><b><i>Pesan Ini Dikirim Menggunakan System, Mohon untuk tidak membalas</i></b></small><br><br>
 									<br><br>
 									Best Regards<br><br>
 									<b><i>System Info</i></b><br>
