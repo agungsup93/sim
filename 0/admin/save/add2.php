@@ -1,4 +1,5 @@
 <?php
+
 include '../../../koneksi.php';
 if (isset($_POST['save'])){
 	$id			= htmlspecialchars($_POST['id']);
@@ -10,16 +11,25 @@ if (isset($_POST['save'])){
 	$jbtn		= htmlspecialchars($_POST['jbtn']);
 	$email		= htmlspecialchars($_POST['email']);
 	$tlp		= htmlspecialchars($_POST['tlp']);
-	$tgl	 	= date("Y-m-d");
 	$level		= htmlspecialchars($_POST['level']);
+	$tgl		= htmlspecialchars($_POST['tgl']);
+	$foto		= $_FILES['foto']['name'];
+	$tmp		= $_FILES['foto']['tmp_name'];
+	
+	$fotobaru 	= date('dmYHis').$foto;
+	
+	$path = "../gambar/".$fotobaru;
+	
 	$cek		= mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM user WHERE nik='$nik' or email='$email'"));
+
 		if ($cek > 0) {
 			echo "<script language = 'javascript'> alert ('Maaf NIK atau Email Sudah terdaftar'); window.location='../add-user'</script>";
 		}else{
-			$query = mysqli_query($koneksi, "INSERT INTO user (id, nik, nm_dpn, nm_blk, password, pass, jbtn, email, tlp, tgl,  level)
-			VALUES ('".$id."', '".$nik."', '".$nm_dpn."', '".$nm_blk."', '".$password."', '".$pass."', '".$jbtn."', '".$email."', '".$tlp."', '".$tgl."', '".$level."')");
-
-		if ($query) {
+			if(move_uploaded_file($tmp, $path)){
+				$query  = "INSERT INTO user VALUES ('".$id."', '".$nik."', '".$nm_dpn."', '".$nm_blk."', '".$password."', '".$pass."', '".$jbtn."', '".$email."', '".$tlp."', '".$level."', '".$tgl."', '".$fotobaru."')";
+				$sql	= mysqli_query($connect, $query);
+				
+			if ($query) {
 			require '../../vendor/autoload.php';
 			
 			$mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -66,11 +76,13 @@ if (isset($_POST['save'])){
 				{
 					echo "Mailer Error: " . $mail->ErrorInfo;
 				} else {
-					echo "<script language = 'javascript'> alert ('Succes'); window.location='../add-user'</script> ";
+					echo "<script language = 'javascript'> alert ('Succes'); window.location='../data-user'</script> ";
 				}
 		} else {
 			echo "<script language = 'javascript'> alert ('Gagal'); window.location='../add-user'</script> ";
 		}
 		}
 }
+
+			}
 ?>

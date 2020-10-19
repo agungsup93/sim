@@ -88,7 +88,7 @@ if( ! isset($_SESSION['email'])){
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-danger">
-              <h4 class="modal-title">Hapus Data<i>(Matrial)</i></h4>
+              <h4 class="modal-title">Hapus Data<i>(User)</i></h4>
               </button>
             </div>
 			

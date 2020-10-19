@@ -35,7 +35,7 @@ if( ! isset($_SESSION['email'])){
                 <h3 class="card-title">Form Add User</h3>
               </div>
 
-              <form name='input' method='POST' action='save/add.php' class='form-horizontal'>
+              <form name='input' method='POST' action='save/add' class='form-horizontal'>
 				  <div class="card-body">
 					  <div class="row">
 						  <div class="col-md-6">
@@ -84,6 +84,7 @@ if( ! isset($_SESSION['email'])){
 							<div class="form-group">
 								<label>Telepone</label>
 								<input type="number" name="tlp" class="form-control" placeholder="+62">
+								<input type="date" name="tgl" hidden>
 								  <div class="input-group-append">
 								  </div>
 							</div>
