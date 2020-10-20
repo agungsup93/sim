@@ -98,16 +98,16 @@ include "_controller/aside.php";
 					  <div class="form-group row">
 						<label for="input" class="col-sm-2 control-label">Kategori</label>
 						<div class="col-sm-10">
-						  <select onchange="check()" id="part_no" name="part_no" class='form-control'>
-							<option value='' selected>- Pilih -</option>
-								<?php
-									include "../../koneksi.php";
-									$in_brg = mysqli_query($koneksi,"SELECT * FROM stock");
-									while ($row = mysqli_fetch_array($in_brg)) {
-										echo "<option value='$row[part_no]'>$row[part_no]</option>";
-									}
-								?>
-						</select>
+							<select onchange="check()" id="part_no" name="part_no" class='form-control'>
+								<option value='' selected>- Pilih -</option>
+									<?php
+										include "../../koneksi.php";
+										$in_brg = mysqli_query($koneksi,"SELECT * FROM stock");
+										while ($row = mysqli_fetch_array($in_brg)) {
+											echo "<option value='$row[part_no]'>$row[part_no]</option>";
+										}
+									?>
+							</select>
 						</div>
 					  </div>
 					  <div class="form-group row">
