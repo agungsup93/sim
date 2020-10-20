@@ -88,8 +88,8 @@
             <div class="col-sm-3 col-md-3">
                 <a href="#">
                     <div class="hk-services-box text-center">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Data Karyawan</h3>
+                        <i class="fas fa-key"></i>
+                        <h3>Lupa Password</h3>
                     </div>
                 </a>
             </div>

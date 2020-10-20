@@ -2,7 +2,7 @@
 //function timer login
 function timer()
 {
-   $timeout = 300; // dalam satuan detik
+   $timeout = 600; // dalam satuan detik
    $_SESSION['timeout'] = $timeout;
 }
 

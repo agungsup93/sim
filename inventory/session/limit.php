@@ -1,9 +1,9 @@
 <?php
 	session_start();
 	$timeout = 1; // setting timeout dalam menit
-	$logout = "../login?pesan=belum_login"; // redirect halaman logout
+	$logout = "../index?pesan=belum_login"; // redirect halaman logout
  
-	$timeout = $timeout * 300; // menit ke detik
+	$timeout = $timeout * 600; // menit ke detik
 	if(isset($_SESSION['start_session'])){
 		$elapsed_time = time()-$_SESSION['start_session'];
 		if($elapsed_time >= $timeout){
