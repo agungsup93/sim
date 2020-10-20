@@ -15,7 +15,6 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-<br>
   <div class="login-logo">
     <a href="#"><b>Login</b> Inventory</a>
   </div>

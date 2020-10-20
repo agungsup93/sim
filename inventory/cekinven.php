@@ -15,7 +15,7 @@ if ($cek > 0) {
 		if ($data['level'] == "2") {
 			$_SESSION['email'] = $email;
 			$_SESSION['level'] = "2"; 					//Direksi All Service
-				header("location:admin/dahsboardad");
+				header("location:admin/dashboardad");
 		} else if ($data['level'] == "3") {
 			$_SESSION['email'] = $email;
 			$_SESSION['level'] = "3";
@@ -31,7 +31,7 @@ if ($cek > 0) {
 		} else if ($data['level'] == "6") {
 			$_SESSION['email'] = $email;
 			$_SESSION['level'] = "6";
-				header("location:admin/dahsboardad");
+				header("location:admin/dashboardad");
 		} else if ($data['level'] == "7") {
 			$_SESSION['email'] = $email;
 			$_SESSION['level'] = "7";
